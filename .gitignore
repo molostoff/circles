@@ -1,0 +1,14 @@
+*.md
+*~
+**/.sass-cache/
+**/.DS_Store
+**/runtime/
+**/runtime/logs
+**/runtime/cache
+**/runtime/cache/**
+vendor/
+vendor/**
+**/web/assets
+**/composer.lock
+**/composer.phar
+**/.gitignore
