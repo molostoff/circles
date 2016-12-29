@@ -29,6 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'y',
             'radius',
             'color',
+        		'message',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

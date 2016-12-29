@@ -20,6 +20,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'color')->textInput() ?>
 
+    <?= $form->field($model, 'message')->textInput() ?>
+
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

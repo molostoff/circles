@@ -13,6 +13,7 @@ class m161229_071243_add_circles_table extends Migration
 				  'y' => Schema::TYPE_INTEGER,
 				  'radius' => Schema::TYPE_INTEGER,
 				  'color' => Schema::TYPE_INTEGER,
+       		'message' => Schema::TYPE_TEXT
 				  ]);
     }
 

@@ -18,6 +18,7 @@ class CircleSearch extends Circle
     {
         return [
             [['id', 'x', 'y', 'radius', 'color'], 'integer'],
+            [['message'], 'string'],
         ];
     }
 
@@ -62,7 +63,9 @@ class CircleSearch extends Circle
             'y' => $this->y,
             'radius' => $this->radius,
             'color' => $this->color,
-        ]);
+        ])
+        	->andFilterWhere(['like', 'message', $this->message])
+        ;
 
         return $dataProvider;
     }

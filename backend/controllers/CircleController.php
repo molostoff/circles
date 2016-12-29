@@ -8,6 +8,7 @@ use common\models\CircleSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * CircleController implements the CRUD actions for Circle model.
@@ -20,7 +21,21 @@ class CircleController extends Controller
     public function behaviors()
     {
         return [
-            'verbs' => [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['index', 'view'],
+                        'allow' => true,
+                    ],
+                    [
+                        'actions' => ['create', 'update', 'delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        		'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],

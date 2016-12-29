@@ -12,6 +12,7 @@ use Yii;
  * @property integer $y
  * @property integer $radius
  * @property integer $color
+ * @property string  $message
  */
 class Circle extends \yii\db\ActiveRecord
 {
@@ -30,6 +31,7 @@ class Circle extends \yii\db\ActiveRecord
     {
         return [
             [['x', 'y', 'radius', 'color'], 'integer'],
+            [['message'], 'string', 'length' => [1, 24]],
         ];
     }
 
@@ -44,6 +46,7 @@ class Circle extends \yii\db\ActiveRecord
             'y' => 'Y',
             'radius' => 'Радиус',
             'color' => 'Цвет',
+        		'message' => 'Сообщение',
         ];
     }
 

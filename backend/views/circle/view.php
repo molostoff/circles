@@ -33,6 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'y',
             'radius',
             'color',
+        		'message'
         ],
     ]) ?>
 
