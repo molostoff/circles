@@ -11,10 +11,10 @@ use yii\db\ActiveQuery;
  */
 class CirclesQuery extends ActiveQuery
 {
-    /*public function active()
+    public function active()
     {
-        return $this->andWhere('[[status]]=1');
-    }*/
+        return $this->andWhere([ '>', message, '']);
+    }
 
     /**
      * @inheritdoc

@@ -8,7 +8,9 @@ return [
     		'urlManager' => [
     				'class' => 'yii\web\UrlManager',
     				'enablePrettyUrl' => true,
+    				'enableStrictParsing' => false,
     				'showScriptName' => false
     		],
+
     ],
 ];

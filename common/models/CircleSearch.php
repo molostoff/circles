@@ -11,25 +11,19 @@ use yii\data\ActiveDataProvider;
  */
 class CircleSearch extends Circle
 {
-    /**
-     * @inheritdoc
-     */
-    public function rules()
+    /* public function rules()
     {
         return [
             [['id', 'x', 'y', 'radius', 'color'], 'integer'],
             [['message'], 'string'],
         ];
-    }
+    } */
 
-    /**
-     * @inheritdoc
-     */
-    public function scenarios()
+    /* public function scenarios()
     {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
-    }
+    } */
 
     /**
      * Creates data provider instance with search query applied
@@ -40,7 +34,7 @@ class CircleSearch extends Circle
      */
     public function search($params)
     {
-        $query = Circle::find();
+        $query = Circle::find()->active();
 
         // add conditions that should always apply here
 
