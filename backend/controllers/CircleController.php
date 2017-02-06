@@ -53,7 +53,7 @@ class CircleController extends Controller
         $searchModel = new CircleSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
+        return $this->render('list-circles', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);

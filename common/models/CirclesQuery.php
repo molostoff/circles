@@ -16,21 +16,4 @@ class CirclesQuery extends ActiveQuery
         return $this->andWhere([ '>', message, '']);
     }
 
-    /**
-     * @inheritdoc
-     * @return Circle[]|array
-     */
-    public function all($db = null)
-    {
-        return parent::all($db);
-    }
-
-    /**
-     * @inheritdoc
-     * @return Circle|array|null
-     */
-    public function one($db = null)
-    {
-        return parent::one($db);
-    }
 }
